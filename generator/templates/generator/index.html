@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Password Generator</h1>
+        <h3><a href='{%url 'about'%}'>About</a></h3>
+        <form method="GET" action="{%url 'password' %}">
+            <label> Length</label>
+            <select name="length">
+                <option value="6">6</option>
+                <option value="8" selected="selected">8</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+            </select>
+            <br>
+            <input type="checkbox" name='should_include_char'>Include alphabetical Characters
+        </br>
+        <input type="submit" value="Generate Password">
+        </form>
+
+
+    </body>
+</html>
